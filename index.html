@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link href="google-font" rel="stylesheet" /> -->
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <header></header>
+    <main>
+      <section>
+        <h1>Webopgaves Roggeman</h1>
+        <ol>
+          <li>
+            Tooltip on hover
+            <article>
+              Men heeft in Europa de ongelukkige gewoonte aangenomen het
+              jazzgebeuren af te lezen van de festivals die ieder jaar tijdens
+              de zomervakantie in diverse plaatsen als Juan-les-Pins (Frankrijk)
+              of
+              <span class="tooltip tooltip-one">
+                Comblain-la-Tours
+                <p class="tooltiptext-one">
+                  Moet ‘Tour’ zijn – het festival daar was tussen 1959 en 1965:
+                  https://nl.wikipedia.org/wiki/Comblain-la-Tour
+                </p> </span
+              >(België) plaats vinden. De programmering van dergelijke festivals
+              heeft echter bijna niets te maken met de eigenlijke situatie van
+              het algemeen jazzpodium op een bepaald ogenblik. Programmering
+              wordt door honderd-en-een factoren gedicteerd, de esthetische zijn
+              de minst belangrijke. De tweeslachtigheid van de huidige
+              Comblain-formule laat duidelijk doorschemeren dat financiële
+              voorwaarden domineren. Een authentiek jazzfestival geniet weinig
+              belangstelling: de jazz, en de moderne jazz in sterkere mate,
+              scheurt zich los van de ontspanningsmuziek en verliest de
+              belangstelling van de massa… omdat zij echte belangstelling
+              opeist.
+            </article>
+          </li>
+          <li>
+            Tooltip on click
+            <article>
+              Men heeft in Europa de ongelukkige gewoonte aangenomen het
+              jazzgebeuren af te lezen van de festivals die ieder jaar tijdens
+              de zomervakantie in diverse plaatsen als Juan-les-Pins (Frankrijk)
+              of
+              <button
+                class="tooltip tooltip-two"
+                onclick="tooltip()"
+                id="tooltip"
+              >
+                Comblain-la-Tours
+              </button>
+              <p class="tooltiptext-two" id="tooltiptext-two">
+                Moet ‘Tour’ zijn – het festival daar was tussen 1959 en 1965:
+                https://nl.wikipedia.org/wiki/Comblain-la-Tour
+              </p>
+              (België) plaats vinden. De programmering van dergelijke festivals
+              heeft echter bijna niets te maken met de eigenlijke situatie van
+              het algemeen jazzpodium op een bepaald ogenblik. Programmering
+              wordt door honderd-en-een factoren gedicteerd, de esthetische zijn
+              de minst belangrijke. De tweeslachtigheid van de huidige
+              Comblain-formule laat duidelijk doorschemeren dat financiële
+              voorwaarden domineren. Een authentiek jazzfestival geniet weinig
+              belangstelling: de jazz, en de moderne jazz in sterkere mate,
+              scheurt zich los van de ontspanningsmuziek en verliest de
+              belangstelling van de massa… omdat zij echte belangstelling
+              opeist.
+            </article>
+          </li>
+          <li>
+            No tooltip
+            <article class="grid">
+              <div class="column">
+                Men heeft in Europa de ongelukkige gewoonte aangenomen het
+                jazzgebeuren af te lezen van de festivals die ieder jaar tijdens
+                de zomervakantie in diverse plaatsen als Juan-les-Pins
+                (Frankrijk) of
+                <span class="tooltip-three">Comblain-la-Tours</span>
+                (België) plaats vinden. De programmering van dergelijke
+                festivals heeft echter bijna niets te maken met de eigenlijke
+                situatie van het algemeen jazzpodium op een bepaald ogenblik.
+              </div>
+              <div class="column">
+                Programmering wordt door honderd-en-een factoren gedicteerd, de
+                esthetische zijn de minst belangrijke. De tweeslachtigheid van
+                de huidige Comblain-formule laat duidelijk doorschemeren dat
+                financiële voorwaarden domineren. Een authentiek jazzfestival
+                geniet weinig belangstelling: de jazz, en de moderne jazz in
+                sterkere mate, scheurt zich los van de ontspanningsmuziek en
+                verliest de belangstelling van de massa… omdat zij echte
+                belangstelling opeist.
+              </div>
+              <div class="column note">
+                Moet ‘Tour’ zijn – het festival daar was tussen 1959 en 1965:
+                https://nl.wikipedia.org/wiki/Comblain-la-Tour
+              </div>
+            </article>
+          </li>
+        </ol>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

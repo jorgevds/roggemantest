@@ -1,11 +1,38 @@
 /* Body styles */
 body {
   display: flex;
+  flex-direction: column;
   font-size: 1rem;
+  background-color: whitesmoke;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-.title {
+header {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  width: 100%;
+  background-color: #333;
+  color: whitesmoke;
   text-align: center;
+}
+
+.title-heading {
+  margin: auto;
+}
+
+.title-heading h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  width: 30ch;
+  margin: auto;
+}
+
+.title-heading h2 {
+  font-variant-caps: small-caps;
 }
 
 h3,
@@ -15,6 +42,24 @@ h4 {
 
 h3:first-of-type {
   margin-top: 124px;
+}
+
+p {
+  width: 40ch;
+  margin: auto;
+  line-height: 2rem;
+}
+
+@media (min-width: 900px) {
+  p {
+    width: 69ch;
+  }
+}
+
+.first-paragraph:first-line {
+  font-variant-caps: small-caps;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
 }
 
 /* Img styles */
@@ -46,10 +91,17 @@ article {
 /* Feature: tooltip on hover */
 span {
   position: relative;
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
 }
-
+span:hover {
+  text-decoration: none;
+  box-shadow: inset 0 0px 10px 10px rgba(0, 0, 0, 1);
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
 /* Styling box */
-[data-tooltip]:before {
+[data-tooltip]::before {
   content: attr(data-tooltip);
   position: absolute;
   margin-bottom: 1.2rem;
@@ -57,7 +109,7 @@ span {
   display: block;
   font-size: 0.8rem;
   opacity: 0;
-  width: 50vw;
+  width: 82ch;
   transition: all 0.15s ease;
   padding: 12px;
   color: #333;
@@ -67,7 +119,7 @@ span {
 }
 
 /* Change opacity of box on hover */
-[data-tooltip]:hover:before {
+[data-tooltip]:hover::before {
   opacity: 1;
   background: black;
   color: white;
@@ -76,4 +128,10 @@ span {
 /* Stops the tooltip from flickering */
 [data-tooltip]::before {
   pointer-events: none;
+}
+
+footer {
+  font-size: 0.9rem;
+  text-align: center;
+  height: 40vh;
 }

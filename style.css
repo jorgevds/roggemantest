@@ -7,6 +7,7 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 header {
@@ -24,11 +25,17 @@ header {
 }
 
 .title-heading h1 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  width: 30ch;
   margin: auto;
+}
+
+@media (min-width: 700px) {
+  .title-heading h1 {
+    font-size: 2rem;
+    width: 30ch;
+  }
 }
 
 .title-heading h2 {
@@ -41,7 +48,7 @@ h4 {
 }
 
 h3:first-of-type {
-  margin-top: 124px;
+  margin-top: 4rem;
 }
 
 p {
@@ -70,6 +77,12 @@ p {
 
 .hero img {
   margin: 12px 0;
+}
+
+@media (max-width: 500px) {
+  .hero img {
+    width: 80%;
+  }
 }
 
 .hero figcaption {
@@ -118,6 +131,12 @@ span:hover {
   z-index: 2;
 }
 
+@media (max-width: 990px) {
+  [data-tooltip]::before {
+    width: 47ch;
+  }
+}
+
 /* Change opacity of box on hover */
 [data-tooltip]:hover::before {
   opacity: 1;
@@ -134,4 +153,6 @@ footer {
   font-size: 0.9rem;
   text-align: center;
   height: 40vh;
+  width: 80%;
+  margin: auto;
 }

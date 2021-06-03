@@ -1,4 +1,10 @@
 /* Body styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -18,6 +24,12 @@ header {
   background-color: #333;
   color: whitesmoke;
   text-align: center;
+}
+
+@media (min-width: 1400px) {
+  header {
+    height: 20vh;
+  }
 }
 
 .title-heading {
@@ -49,12 +61,19 @@ h4 {
 
 h3:first-of-type {
   margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
 p {
-  width: 40ch;
+  width: 50ch;
   margin: auto;
   line-height: 2rem;
+}
+
+@media (max-width: 500px) {
+  p {
+    width: auto;
+  }
 }
 
 @media (min-width: 900px) {
@@ -87,7 +106,14 @@ p {
 
 .hero figcaption {
   font-size: 0.8rem;
-  margin: 0 25%;
+  margin: auto;
+  width: auto;
+}
+
+@media (min-width: 500px) {
+  .hero figcaption {
+    width: 50ch;
+  }
 }
 
 section {
@@ -131,9 +157,21 @@ span:hover {
   z-index: 2;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 900px) {
   [data-tooltip]::before {
-    width: 47ch;
+    width: 60ch;
+  }
+}
+
+@media (max-width: 500px) {
+  [data-tooltip]::before {
+    width: 70vw;
+  }
+}
+/* For small, aka more recent, smartphones... */
+@media (max-width: 400px) {
+  [data-tooltip]::before {
+    width: 68vw;
   }
 }
 
@@ -155,4 +193,10 @@ footer {
   height: 40vh;
   width: 80%;
   margin: auto;
+}
+
+@media (min-width: 1400px) {
+  footer {
+    height: 20vh;
+  }
 }
